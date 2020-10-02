@@ -18,10 +18,13 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>20</y>
+      <y>40</y>
       <width>201</width>
       <height>141</height>
      </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here. Or don't, you know, free choice and stuff. Now click.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="text">
      <string>0</string>
@@ -31,10 +34,13 @@
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>20</y>
+      <y>40</y>
       <width>191</width>
       <height>141</height>
      </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click this once X &amp;gt;= 10. Or before, but that won't change a thing.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="text">
      <string>0</string>
@@ -44,16 +50,19 @@
     <property name="geometry">
      <rect>
       <x>400</x>
-      <y>20</y>
+      <y>40</y>
       <width>171</width>
       <height>141</height>
      </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Only if Y &amp;gt;= 10. Or if you want RSI.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="text">
      <string>0</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="normalPointsHeader">
+   <widget class="QLineEdit" name="Xtext">
     <property name="geometry">
      <rect>
       <x>50</x>
@@ -75,7 +84,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLineEdit" name="normalPointsHeader_2">
+   <widget class="QLineEdit" name="Ytext">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -97,7 +106,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLineEdit" name="normalPointsHeader_3">
+   <widget class="QLineEdit" name="Ztext">
     <property name="geometry">
      <rect>
       <x>430</x>
@@ -116,6 +125,126 @@
      <set>Qt::AlignCenter</set>
     </property>
     <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="subXtext">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>20</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="text">
+     <string>Click here to increment</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="subYtext">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>20</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="text">
+     <string>Click when X &gt;= 10</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="subZtext">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>20</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="text">
+     <string>Click when Y &gt;= 10</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="plainTextEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>180</y>
+      <width>301</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="plainText">
+     <string>Welcome to the Beautiful Automatic Simple Idle Clicker, or Steve for short.
+Click on the button under X to get... points?
+Then if you have 10 or more points, click on Y to trade 10 of those points for 1 Y. Same works between Y and Z.
+For every point in Y, once every 10 seconds, you get that much points in X.
+For every point in Z, you trade that much times 10 points in X for points in Y, or less if you have less to trade.
+
+Use the radiobuttons on the right to disable this.</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="enableFAP">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>180</y>
+      <width>82</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Automatic Y</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+    <property name="autoExclusive">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="enableSAP">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>200</y>
+      <width>82</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Automatic Z</string>
+    </property>
+    <property name="checked">
      <bool>true</bool>
     </property>
    </widget>

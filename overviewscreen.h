@@ -29,12 +29,18 @@ private slots:
 
     void on_secondAutoPoints_released();
 
+    void on_enableFAP_released();
+
+    void on_enableSAP_released();
+
 private:
     void updateValuesOnScreen();
 
     unsigned long long currentNormalPoints;
     unsigned long long currentFAPoints; //first auto
     unsigned long long currentSAPoints; //second auto
+    bool enableFAP;
+    bool enableSAP;
 
     Ui::OverviewScreen *ui;
     std::mutex pointsMutex;
